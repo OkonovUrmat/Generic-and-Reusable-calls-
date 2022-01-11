@@ -15,7 +15,7 @@ struct User: Codable {
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     struct Constants {
-        static let usersURL = URL(string: "https://jsonplaceholder.typecode.com/users")
+        static let usersURL = URL(string: "https://jsonplaceholder.typicode.com/users")
     }
     
     var models = [Codable]()
