@@ -60,6 +60,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
         content.text = (models[indexPath.row] as? User)?.name
+        cell.contentConfiguration = content
         return cell
     }
     
