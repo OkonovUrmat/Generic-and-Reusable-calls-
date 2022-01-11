@@ -43,8 +43,14 @@ extension URLSession {
                 return
             }
             
-            
+            do {
+                let result = try JSONDecoder().decode(expecting, from: data)
+                completionHandler(.success(result))
+            } catch {
+                completionHandler(.failure(error))
+            }
         }
         
+        task.resume()
     }
 }
